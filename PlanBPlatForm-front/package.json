@@ -1,0 +1,30 @@
+{
+  "name": "auto-test-manager-front",
+  "version": "0.0.1",
+  "description": "需求管理前端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp cleanDev && \"node_modules/.bin/webpack\" && gulp copyToWebRoot",
+    "server": "node_modules/.bin/webpack-dev-server",
+    "webpack": "node_modules/.bin/webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "express": "^4.15.0",
+    "fs-extra": "^2.0.0",
+    "gulp": "^3.9.1",
+    "http-proxy-middleware": "^0.17.4",
+    "jsx-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
