@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="../../lib/mysql-connector-java-5.1.25-bin.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/plan" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.sinosoft.planb.db.entity"
+			targetProject="..\src\main\java">
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.sinosoft.planb.db.mapper"
+			targetProject="..\src\main\java">
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.sinosoft.planb.db.mapper"
+			targetProject="..\src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		 <!--<table tableName="user" domainObjectName="User"> <columnOverride
+			column="userId" property="userId"></columnOverride> <columnOverride column="userName"
+			property="userName"></columnOverride> <columnOverride column="password" property="password"></columnOverride>
+			<columnOverride column="state" property="state"></columnOverride>
+			<columnOverride column="MakeDate" property="makeDate"></columnOverride>
+		 </table>
+		<table tableName="menu" domainObjectName="Menu">
+			<columnOverride column="id" property="id"></columnOverride>
+			<columnOverride column="parentId" property="parentId"></columnOverride>
+			<columnOverride column="parentIds" property="parentIds"></columnOverride>
+			<columnOverride column="name" property="name"></columnOverride>
+			<columnOverride column="sort" property="sort"></columnOverride>
+			<columnOverride column="href" property="href"></columnOverride>
+		</table>
+		<table tableName="role" domainObjectName="Role">
+			<columnOverride column="roleCode" property="roleCode"></columnOverride>
+			<columnOverride column="roleName" property="roleName"></columnOverride>
+			<columnOverride column="note" property="note"></columnOverride>
+		</table>
+		<table tableName="rolemenu" domainObjectName="RoleMenu">
+			<columnOverride column="roleCode" property="roleCode"></columnOverride>
+			<columnOverride column="menuCode" property="menuCode"></columnOverride>
+		</table>
+		<table tableName="userrole" domainObjectName="UserRole">
+			<columnOverride column="userCode" property="userCode"></columnOverride>
+			<columnOverride column="roleCode" property="roleCode"></columnOverride>
+		</table>-->
+		<table tableName="outplan" domainObjectName="OutPlan">
+			<columnOverride column="serialno" property="serialNo"></columnOverride>
+			<columnOverride column="year" property="year"></columnOverride>
+			<columnOverride column="quarter" property="quarter"></columnOverride>
+			<columnOverride column="modular" property="modular"></columnOverride>
+			<columnOverride column="oa" property="oa"></columnOverride>
+			<columnOverride column="seq" property="seq"></columnOverride>
+			<columnOverride column="seqname" property="seqName"></columnOverride>
+			<columnOverride column="analyst" property="analyst"></columnOverride>
+			<columnOverride column="analystart" property="analyStart"></columnOverride>
+			<columnOverride column="analyend" property="analyEnd"></columnOverride>
+			<columnOverride column="developer" property="developer"></columnOverride>
+			<columnOverride column="developerstart" property="developerStart"></columnOverride>
+			<columnOverride column="developerend" property="developerEnd"></columnOverride>
+			<columnOverride column="changeflag" property="changeFlag"></columnOverride>
+			<columnOverride column="remark" property="remark"></columnOverride>
+			<columnOverride column="operator" property="operator"></columnOverride>
+			<columnOverride column="changedate" property="changeDate"></columnOverride>
+		</table>
+	</context>
+</generatorConfiguration>
