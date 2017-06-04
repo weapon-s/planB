@@ -1,8 +1,6 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React  from "react";
 
-var Modal = require("../../../common/modal.jsx");
-Modal = Modal.Modal;
+import Modal from "../../../common/modal.jsx";
 
 function Form(props) {
   return <form action={props.action} id="passwordChangeForm">
@@ -19,7 +17,7 @@ function Form(props) {
   </form>
 }
 
-class PasswordChangeModal extends React.Component {
+export default class PasswordChangeModal extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -51,5 +49,3 @@ class PasswordChangeModal extends React.Component {
     </Modal>
   }
 }
-
-exports.PasswordChangeModal = PasswordChangeModal;

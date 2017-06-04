@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class RoleList extends React.Component{
+export default class RoleList extends React.Component{
     constructor(props){
         super(props);
         this.state = {}
@@ -74,4 +74,3 @@ class RoleList extends React.Component{
         </div>
     }
 }
-exports.RoleList = RoleList;

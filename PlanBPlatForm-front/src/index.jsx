@@ -1,17 +1,13 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React  from "react";
+import ReactDOM from "react-dom";
 
-var moduleMenu = require("./moduleMenu.jsx");
-var ModuleMenu = moduleMenu.ModuleMenu;
-var components = require("./components.js");
+import ModuleMenu from "./moduleMenu.jsx";
 
-var narbar = require('./navbar.jsx');
-var Navbar = narbar.Navbar;
+import Navbar from './navbar.jsx';
 
-var LoginForm = require("./loginForm.jsx");
-LoginForm = LoginForm.LoginForm;
+import LoginForm from "./loginForm.jsx";
 
-class Main extends React.Component{
+export default class Main extends React.Component{
     constructor(props){
         super(props);
         this.state = {

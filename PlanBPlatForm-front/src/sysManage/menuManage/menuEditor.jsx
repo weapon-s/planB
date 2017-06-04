@@ -1,12 +1,9 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React  from "react";
 
-var tabList = require("../../common/tabList.jsx");
-var TabList = tabList.TabList;
+import TabList from "../../common/tabList.jsx";
 
-var menuList = require("./menulist.jsx");
 
-class MenuEditor extends React.Component{
+export default class MenuEditor extends React.Component{
     constructor(props){
         super(props);
 
@@ -242,5 +239,3 @@ class MenuEditor extends React.Component{
         </div>
     }
 }
-
-exports.MenuEditor = MenuEditor;

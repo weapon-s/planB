@@ -1,7 +1,6 @@
-var React = require("react");
-var style = require('../static/css/login.css');
+import React from "react";
 
-class LoginForm extends React.Component{
+export default class LoginForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -77,5 +76,3 @@ class LoginForm extends React.Component{
             </div>
     }
 }
-
-exports.LoginForm = LoginForm;

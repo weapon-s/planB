@@ -1,7 +1,6 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
 
-class Navbar extends React.Component{
+export default class Navbar extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -64,11 +63,9 @@ class Navbar extends React.Component{
                 <div id="navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">{this.renderItems()}</ul>
                     <div className="navbar-right">
-                        <p className="navbar-text">
-                            <a className="text-muted" target="homeFrame" href="#" >{this.props.currentUser?this.props.currentUser.userCode:""}</a>
-                        </p>
                         <ul className="nav navbar-nav">
-                            <li><a style={{cursor:"pointer"}} onClick={this.props.logout}>logout</a></li>
+                            <li><a className="text-muted" target="homeFrame">{this.props.currentUser?this.props.currentUser.userCode:""}</a></li>
+                            <li><a style={{cursor:"pointer"}} onClick={this.props.logout}>退出</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,5 +73,3 @@ class Navbar extends React.Component{
         </nav>
     }
 }
-
-exports.Navbar = Navbar;

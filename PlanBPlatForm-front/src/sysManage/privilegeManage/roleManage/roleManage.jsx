@@ -1,21 +1,16 @@
-var React = require("react");
+import React  from "react";
 
-var TabList = require("../../../common/tabList.jsx");
-TabList = TabList.TabList;
+import TabList from "../../../common/tabList.jsx";
 
-var roleList = require('./roleList.jsx');
-RoleList = roleList.RoleList;
+import RoleList from './roleList.jsx';
 
-var newRoleForm  = require('./newRoleForm.jsx');
-NewRoleForm = newRoleForm.NewRoleForm;
+import NewRoleForm  from './newRoleForm.jsx';
 
-var roleGrantForm = require('./roleGrantForm.jsx');
-RoleGrantForm = roleGrantForm.RoleGrantForm;
+import RoleGrantForm from './roleGrantForm.jsx';
 
-var roleAppEnvPrivilegeEdit = require('./roleAppEnvPrivilegeEdit.jsx');
-RoleAppEnvPrivilegeEdit = roleAppEnvPrivilegeEdit.RoleAppEnvPrivilegeEdit;
+import RoleAppEnvPrivilegeEdit from './roleAppEnvPrivilegeEdit.jsx';
 
-class RoleManage extends React.Component {
+export default class RoleManage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -176,5 +171,3 @@ class RoleManage extends React.Component {
         </div>
     }
 }
-
-exports.RoleManage = RoleManage;

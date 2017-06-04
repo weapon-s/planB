@@ -1,12 +1,10 @@
-var React = require("react");
+import React  from "react";
 
-var Modal = require("../../../common/modal.jsx");
-Modal = Modal.Modal;
+import Modal from "../../../common/modal.jsx";
 
-var pageTable = require("../../../common/pageTable.jsx");
-var PageTable = pageTable.PageTable;
+import PageTable from "../../../common/pageTable.jsx";
 
-class RoleGrantModal extends React.Component {
+export default class RoleGrantModal extends React.Component {
     constructor(props){
         super(props);
         this.state = {}
@@ -79,5 +77,3 @@ class RoleGrantModal extends React.Component {
         }
     }
 }
-
-exports.RoleGrantModal = RoleGrantModal;

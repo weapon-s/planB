@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class InputDiv extends React.Component{
+export default class InputDiv extends React.Component{
     constructor(props) {
         super(props);
     }
@@ -14,4 +14,3 @@ class InputDiv extends React.Component{
     }
 
 }
-exports.InputDiv = InputDiv;

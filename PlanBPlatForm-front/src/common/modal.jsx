@@ -1,7 +1,6 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React  from "react";
 
-class Modal extends React.Component {
+export default class Modal extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -27,5 +26,3 @@ class Modal extends React.Component {
     </div>
   }
 }
-
-exports.Modal = Modal;

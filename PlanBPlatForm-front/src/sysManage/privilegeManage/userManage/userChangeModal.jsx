@@ -1,7 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-var Modal = require("../../../common/modal.jsx");
-Modal = Modal.Modal;
+import Modal from "../../../common/modal.jsx";
 
 function Form(props) {
   if(props.user){
@@ -35,7 +34,7 @@ function Form(props) {
   }
 }
 
-class UserChangeModal extends React.Component {
+export default class UserChangeModal extends React.Component {
   constructor(props){
     super(props);
     this.state = {};    
@@ -86,5 +85,3 @@ class UserChangeModal extends React.Component {
     </Modal>
   }
 }
-
-exports.UserChangeModal = UserChangeModal;

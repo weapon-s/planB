@@ -1,23 +1,20 @@
-var React = require("react");
-var components = require("../components.js");
+import React  from "react";
 
-var pageTable = require("../common/pageTable.jsx");
-var PageTable = pageTable.PageTable;
+import PageTable  from "../common/pageTable.jsx";
 
-var LabelDiv = require("../common/labelDiv.jsx");
-LabelDiv = LabelDiv.LabelDiv;
+import LabelDiv from "../common/labelDiv.jsx";
 
-var SelectDiv = require("../common/selectDiv.jsx");
-SelectDiv = SelectDiv.SelectDiv;
+import InputDiv from "../common/inputDiv.jsx";
 
-var InputDiv = require("../common/inputDiv.jsx");
-InputDiv = InputDiv.InputDiv;
+import SelectDiv from "../common/selectDiv.jsx";
+import {Dropdown} from 'semantic-ui-react';
 
-class OutsidePlanQuery extends React.Component{
+export default class OutsidePlanQuery extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            data:{}
+            data:{},
+            yearOptions:[]
         }
     }
 
@@ -27,9 +24,17 @@ class OutsidePlanQuery extends React.Component{
     }
     
     loadYearOptions(){
+        let yearOptions = [];
         $.get("../api/sysQry/yearQuery.do",{}, (data)=>{
+            for(let i=0;i<data.length;i++){
+                yearOptions.push({
+                    key:data[i].code,
+                    value:data[i].code,
+                    text:data[i].codeName
+                });
+            }
             this.setState({
-                yearOptions:data
+                yearOptions:yearOptions
             });
         },"json");
     }
@@ -42,15 +47,19 @@ class OutsidePlanQuery extends React.Component{
         },"json");
     }
 
-    renderYearOptions(){
-        if(this.state.yearOptions){
-            let yearOptions = this.state.yearOptions;
-            return yearOptions.map((option,index) =>{
-                return <option key={index} value={option.code}>{option.codeName}</option>
-            })
-        }else{
-            return <option></option>
+    renderYearOptions(e,{name}){
+        let value = e.currentTarget.children[0].innerHTML;
+        console.log(value);
+        let data = this.state.data;
+        for(let i=0;i<this.state.yearOptions.length;i++){
+            if(value === this.state.yearOptions[i].text){
+                data["yearKey"] = this.state.yearOptions[i].key
+            }
         }
+        data[name] = value;
+        this.setState({
+            data:data
+        });
     }
 
     renderQuarterOptions(){
@@ -116,16 +125,21 @@ class OutsidePlanQuery extends React.Component{
         })
     }
 
+
     renderTitle(){
         return <div className="container-fluid">
             <div className="form-group">
                 <div className="row">
                     <LabelDiv title="年度"/>
-                    <SelectDiv name="year" onChange={this.onInputDataChange.bind(this)}>
-                        {this.renderYearOptions()}
-                    </SelectDiv>
+                    <Dropdown selection search
+                              name="year"
+                              defaultValue={this.state.data.year}
+                              onChange={this.renderYearOptions.bind(this)}
+                              style={{width:"100%"}}
+                              options={this.state.yearOptions}
+                    />
                     <LabelDiv title="季度"/>
-                    <SelectDiv name="quarter" onChange={this.onInputDataChange.bind(this)}>
+                    <SelectDiv name="quarter" value="" onChange={this.onInputDataChange.bind(this)}>
                         {this.renderQuarterOptions()}
                     </SelectDiv>
                     <LabelDiv title="模块"/>
@@ -206,5 +220,3 @@ class OutsidePlanQuery extends React.Component{
         </div>
     }
 }
-
-exports.OutsidePlanQuery = OutsidePlanQuery;

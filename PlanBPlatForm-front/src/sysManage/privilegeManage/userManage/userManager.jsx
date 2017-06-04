@@ -1,15 +1,12 @@
-var React = require("react");
+import React  from "react";
 
-var TabList = require("../../../common/tabList.jsx");
-TabList = TabList.TabList;
+import TabList from "../../../common/tabList.jsx";
 
-var UserList = require("./userList.jsx");
-UserList = UserList.UserList;
+import UserList from "./userList.jsx";
 
-var NewUserEditor = require("./newUserEditor.jsx");
-NewUserEditor = NewUserEditor.NewUserEditor;
+import NewUserEditor from "./newUserEditor.jsx";
 
-class UserManager extends React.Component {
+export default class UserManager extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -69,5 +66,3 @@ class UserManager extends React.Component {
     </div>
   }
 }
-
-exports.UserManager = UserManager;

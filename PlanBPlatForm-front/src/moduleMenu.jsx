@@ -1,9 +1,7 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
+import components from "./components";
 
-var components = require("./components.js");
-
-class ModuleMenu extends React.Component{
+export default class ModuleMenu extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -102,5 +100,3 @@ class ModuleMenu extends React.Component{
         return <div className="panel panel-default">{this.renderMenus()}</div>;
     }
 }
-
-exports.ModuleMenu = ModuleMenu;

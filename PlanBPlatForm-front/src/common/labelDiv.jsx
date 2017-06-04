@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class LabelDiv extends React.Component{
+export default class LabelDiv extends React.Component{
     constructor(props) {
         super(props);
     }
@@ -12,4 +12,3 @@ class LabelDiv extends React.Component{
     }
 
 }
-exports.LabelDiv = LabelDiv;

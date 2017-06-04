@@ -1,15 +1,13 @@
-var React = require("react");
+import React  from "react";
 
-var PageTable = require("../../../common/pageTable.jsx");
-PageTable = PageTable.PageTable;
+import PageTable from "../../../common/pageTable.jsx";
 
-var UserChangeModal = require("./userChangeModal.jsx");
-UserChangeModal = UserChangeModal.UserChangeModal;
+import UserChangeModal from "./userChangeModal.jsx";
 
-var PasswordChangeModal = require("./passwordChangeModal.jsx");
-PasswordChangeModal = PasswordChangeModal.PasswordChangeModal;
 
-class UserList extends React.Component {
+import PasswordChangeModal from "./passwordChangeModal.jsx";
+
+export default class UserList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -170,5 +168,3 @@ class UserList extends React.Component {
     </div>;
   }
 }
-
-exports.UserList = UserList;

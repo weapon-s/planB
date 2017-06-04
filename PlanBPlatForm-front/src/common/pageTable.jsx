@@ -1,8 +1,5 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React  from "react";
 
-var React = require("react");
-var ReactDOM = require("react-dom");
 
 /**
  * 需要属性如下：
@@ -16,7 +13,7 @@ var ReactDOM = require("react-dom");
  * rows：数据，数组
  * 
  */
-class PageTable extends React.Component{
+export default class PageTable extends React.Component{
 	constructor(props){
 		super(props);
 	}
@@ -72,5 +69,3 @@ class PageTable extends React.Component{
 		</div>
 	}
 }
-
-exports.PageTable = PageTable;

@@ -1,4 +1,4 @@
-var React = require("react");
+import React  from "react";
 
 /**
  * 属性说明：
@@ -7,7 +7,7 @@ var React = require("react");
  * name：空间的标识，在 onDatePicked 回调中用到
  * onDatePicked ：当日期被选择后的回调，参数表如下： (name,value) name 为属性中的 name，value 则是新的日期
  */
-class DatePicker extends React.Component {
+export default class DatePicker extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -62,5 +62,3 @@ class DatePicker extends React.Component {
     </div>
   }
 }
-
-exports.DatePicker = DatePicker;

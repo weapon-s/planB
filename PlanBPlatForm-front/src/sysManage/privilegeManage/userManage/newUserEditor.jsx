@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class NewUserEditor extends React.Component {
+export default class NewUserEditor extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -87,5 +87,3 @@ class NewUserEditor extends React.Component {
     </div>
   }
 }
-
-exports.NewUserEditor = NewUserEditor;

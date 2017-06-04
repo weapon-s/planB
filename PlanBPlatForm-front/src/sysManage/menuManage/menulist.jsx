@@ -1,13 +1,10 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
 
-var tabList = require("../../common/tabList.jsx");
-var TabList = tabList.TabList;
+import TabList from "../../common/tabList.jsx";
 
-var menuEditor = require("./menuEditor.jsx");
-var MenuEditor = menuEditor.MenuEditor;
+import MenuEditor from "./menuEditor.jsx";
 
-class Menulist extends React.Component{
+export default class Menulist extends React.Component{
     constructor(props){
         super(props);
         let items = [
@@ -129,4 +126,3 @@ class Menulist extends React.Component{
         </div>
     }
 }
-exports.Menulist = Menulist;

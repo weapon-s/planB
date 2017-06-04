@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class SelectDiv extends React.Component{
+export default class SelectDiv extends React.Component{
     constructor(props) {
         super(props);
     }
@@ -25,4 +25,3 @@ class SelectDiv extends React.Component{
     }
 
 }
-exports.SelectDiv = SelectDiv;

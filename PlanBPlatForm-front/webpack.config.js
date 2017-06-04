@@ -1,9 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var backend = "http://localhost:8080";
-
 var testBackend = "http://localhost:3000";
-
 module.exports = {
     entry: {
         "app":"./src/index.jsx",
@@ -11,11 +9,27 @@ module.exports = {
     output: {
         filename: '[name]/index.js',
     },
+
     module: {
         loaders:[
-            { test:/\.jsx$/, exclude:/node_modules/, loader: 'babel-loader!jsx-loader?harmony'},
-            {test: /\.css$/, exclude:/node_modules/, loader: "style-loader!css-loader?modules"},
-            {test: /\.(jpg|png)$/, loader: "url-loader"},
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    plugins:['transform-runtime'],
+                    presets: ['es2015',"react"]
+                }
+            },
+            {
+                test: /\.js?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    plugins:['transform-runtime'],
+                    presets: ['es2015']
+                }
+            }
         ]
     },
     devServer:{
@@ -23,7 +37,7 @@ module.exports = {
         proxy:{
             "/api":backend,
             "/test/api":testBackend,
-        },
+        }
     },
     devtool:"source-map",
 };

@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class NewRoleForm extends React.Component{
+export default class NewRoleForm extends React.Component{
     constructor(props){
         super(props);
     }
@@ -47,4 +47,3 @@ class NewRoleForm extends React.Component{
         </div>
     }
 }
-exports.NewRoleForm = NewRoleForm;

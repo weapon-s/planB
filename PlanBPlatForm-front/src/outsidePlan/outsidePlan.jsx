@@ -1,13 +1,10 @@
-var React = require("react");
-var components = require("../components.js");
+import React from "react";
 
-var OutsidePlanInput = require("./outsidePlanInput.jsx");
-var OutsidePlanInput = OutsidePlanInput.OutsidePlanInput;
+import OutsidePlanInput  from  "./outsidePlanInput.jsx";
 
-var OutsidePlanQuery = require("./outsidePlanQuery.jsx");
-var OutsidePlanQuery = OutsidePlanQuery.OutsidePlanQuery;
+import OutsidePlanQuery from "./outsidePlanQuery.jsx";
 
-class OutsidePlan extends React.Component{
+export default class OutsidePlan extends React.Component{
     constructor(props){
         super(props);
         this.state = {};
@@ -54,5 +51,4 @@ class OutsidePlan extends React.Component{
         </div>
     }
 }
-exports.OutsidePlan = OutsidePlan;
 

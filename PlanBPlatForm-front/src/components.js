@@ -1,11 +1,12 @@
-var Menulist = require("./sysManage/menuManage/menulist.jsx");
-exports.Menulist = Menulist.Menulist;
 
-var UserManager = require("./sysManage/privilegeManage/userManage/userManager.jsx");
-exports.UserManager = UserManager.UserManager;
+import Menulist from "./sysManage/menuManage/menulist.jsx";
+exports.Menulist = Menulist;
 
-var RoleManage = require("./sysManage/privilegeManage/roleManage/roleManage.jsx");
-exports.RoleManage = RoleManage.RoleManage;
+import UserManager  from "./sysManage/privilegeManage/userManage/userManager.jsx";
+exports.UserManager = UserManager;
 
-var OutsidePlan = require("./outsidePlan/outsidePlan.jsx");
-exports.OutsidePlan = OutsidePlan.OutsidePlan;
+import RoleManage  from "./sysManage/privilegeManage/roleManage/roleManage.jsx";
+exports.RoleManage = RoleManage;
+
+import OutsidePlan from "./outsidePlan/outsidePlan.jsx";
+exports.OutsidePlan = OutsidePlan;

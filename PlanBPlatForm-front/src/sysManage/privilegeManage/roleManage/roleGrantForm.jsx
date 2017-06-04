@@ -1,12 +1,11 @@
-var React = require("react");
+import React  from "react";
 
-var roleGrantModal = require('./roleGrantModal.jsx');
-RoleGrantModal = roleGrantModal.RoleGrantModal;
+import RoleGrantModal from './roleGrantModal.jsx';
 
-var pageTable = require("../../../common/pageTable.jsx");
-var PageTable = pageTable.PageTable;
 
-class RoleGrantForm extends React.Component{
+import PageTable from "../../../common/pageTable.jsx";
+
+export default class RoleGrantForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -112,4 +111,3 @@ class RoleGrantForm extends React.Component{
         }
     }
 }
-exports.RoleGrantForm = RoleGrantForm;

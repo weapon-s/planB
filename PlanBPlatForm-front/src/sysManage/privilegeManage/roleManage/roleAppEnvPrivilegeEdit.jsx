@@ -1,6 +1,6 @@
-var React = require("react");
+import React  from "react";
 
-class RoleAppEnvPrivilegeEdit extends React.Component {
+export default class RoleAppEnvPrivilegeEdit extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -91,6 +91,3 @@ class RoleAppEnvPrivilegeEdit extends React.Component {
         </div>
     }
 }
-
-
-exports.RoleAppEnvPrivilegeEdit = RoleAppEnvPrivilegeEdit;
